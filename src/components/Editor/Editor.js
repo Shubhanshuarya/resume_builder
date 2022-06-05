@@ -354,6 +354,7 @@ function Editor(props) {
   };
 
   const handleSubmission = () => {
+    // eslint-disable-next-line default-case
     switch (sections[activeSectionKey]) {
       case sections.basicInfo: {
         const tempDetail = {
