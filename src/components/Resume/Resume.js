@@ -290,10 +290,12 @@ const Resume = forwardRef((props, ref) => {
       [sections.project, sections.education, sections.summary],
       [sections.workExp, sections.achievement, sections.other],
     ]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
     swapSourceTarget(source, target);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [source]);
 
   useEffect(() => {
@@ -312,6 +314,7 @@ const Resume = forwardRef((props, ref) => {
 
           <div className={styles.links}>
             {info.basicInfo?.detail?.email ? (
+              // eslint-disable-next-line jsx-a11y/anchor-is-valid
               <a className={styles.link} type="email">
                 <AtSign /> {info.basicInfo?.detail?.email}
               </a>
@@ -319,6 +322,7 @@ const Resume = forwardRef((props, ref) => {
               <span />
             )}
             {info.basicInfo?.detail?.phone ? (
+              // eslint-disable-next-line jsx-a11y/anchor-is-valid
               <a className={styles.link}>
                 <Phone /> {info.basicInfo?.detail?.phone}
               </a>
@@ -326,6 +330,7 @@ const Resume = forwardRef((props, ref) => {
               <span />
             )}
             {info.basicInfo?.detail?.linkedin ? (
+              // eslint-disable-next-line jsx-a11y/anchor-is-valid
               <a className={styles.link}>
                 <Linkedin /> {info.basicInfo?.detail?.linkedin}
               </a>
@@ -333,6 +338,7 @@ const Resume = forwardRef((props, ref) => {
               <span />
             )}
             {info.basicInfo?.detail?.github ? (
+              // eslint-disable-next-line jsx-a11y/anchor-is-valid
               <a className={styles.link}>
                 <GitHub /> {info.basicInfo?.detail?.github}
               </a>
